@@ -1,0 +1,60 @@
+{
+  "name": "motogether-backend",
+  "version": "1.0.0",
+  "description": "Htag Frontend (TypeScript)",
+  "author": "Tim Prapotnik <tim.prapotnik@sers.si>",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "start:prod": "node build/index.ts",
+    "test": "jest -c jest.config.js",
+    "test:unit": "jest -c jest.config.unit.js",
+    "test:integration": "jest -c jest.config.integration.js",
+    "test:watch": "npm run test -- --watchAll",
+    "test:unit:watch": "npm run test:unit -- --watchAll",
+    "test:integration:watch": "npm run test:integration -- --watchAll",
+    "coverage": "npm run test -- --coverage",
+    "coverage:unit": "npm run test:unit -- --coverage",
+    "coverage:integration": "npm run test:integration -- --coverage",
+    "lint": "tslint --project tslint.json",
+    "build": "tsc",
+    "clean": "rm -rf build coverage",
+    "doc": "typedoc"
+  },
+  "devDependencies": {
+    "@hapi/cookie": "^11.0.0",
+    "@types/bcrypt": "^3.0.0",
+    "@types/hapi__cookie": "^10.1.0",
+    "@types/hapi__cryptiles": "^5.0.1",
+    "@types/hapi__hapi": "^19.0.1",
+    "@types/hapi__inert": "^5.2.0",
+    "@types/hapi__joi": "^16.0.9",
+    "@types/hapi__vision": "^5.5.1",
+    "@types/jest": "^24.0.24",
+    "@types/node": "^13.7.0",
+    "@types/nodemailer": "^6.4.0",
+    "@types/pg": "^7.14.1",
+    "hapi-swagger": "^12.1.0",
+    "hygen": "^5.0.3",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "typedoc": "^0.15.5",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@hapi/cryptiles": "^5.0.0",
+    "@hapi/hapi": "^19.0.5",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "bcrypt": "^3.0.7",
+    "dotenv": "^8.2.0",
+    "nodemailer": "^6.4.2",
+    "pg": "^7.18.1"
+  }
+}

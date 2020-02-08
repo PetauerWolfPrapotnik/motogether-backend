@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    // Src
+    "moduleResolution": "node",
+    "module": "commonjs",
+
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+
+    // Output
+    "target": "es6",
+    "outDir": "build",
+    "sourceMap": true,
+    "declaration": true,
+
+    // Extra
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/**/spec.ts", "src/**/*.test.ts", "src/**/test.ts"]
+}
